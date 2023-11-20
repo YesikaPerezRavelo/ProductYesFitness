@@ -1,10 +1,10 @@
-import reactImg from "./assets/carrito.jpg";
+import ReactImg from "./assets/carrito.png";
 import classes from "./CartWidget.module.css";
 
 const CartWidget = () => {
   return (
     <div>
-      <img src={reactImg} />
+      <img src={ReactImg} />
     </div>
   );
 };

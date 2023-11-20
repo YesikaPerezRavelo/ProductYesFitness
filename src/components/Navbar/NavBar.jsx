@@ -9,12 +9,12 @@ const NavBar = () => {
       className={classes.container}
       style={{ display: "flex", justifyContent: "space-between" }}
     >
-      <div>
+      <div className={classes.divlogo}>
         <img src={ReactImg2} alt="" />
       </div>
       <section className={classes.categories}>
         <button className={classes.button}>ENTRENAMIENTOS</button>
-        <button className={classes.button}>ALIMENTACIÓN</button>
+        <button className={classes.button}>AVENTURA</button>
         <button className={classes.button}>MASAJES</button>
         <button className={classes.button}>YOGA</button>
         <div className={classes.cartwidget}>
