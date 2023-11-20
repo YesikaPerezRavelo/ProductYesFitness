@@ -1,0 +1,46 @@
+.container {
+  background-color: none;
+  grid-gap: 20px;
+  font-size: medium;
+  font-size: medium;
+  font-family: "Montserrat", sans-serif;
+}
+
+.h1 {
+  color: rgb(39, 39, 39);
+  font-size: small;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+  padding-top: 25px;
+  padding-left: 50px;
+}
+
+.categories {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-right: 50px;
+}
+
+.button {
+  background: rgb(235, 42, 106);
+  color: white;
+  cursor: pointer;
+  text-transform: none;
+  padding: 10px;
+  transition: all 0.5s;
+  font-family: sans-serif;
+  margin-top: 1rem;
+  border-radius: 8px;
+  width: 10rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.cartwidget {
+  padding-left: 4px;
+}
+
+button:hover {
+  background-color: black;
+}

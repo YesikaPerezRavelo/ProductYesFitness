@@ -1,0 +1,17 @@
+.button {
+    background: #d78383;
+    color: white;
+    cursor: pointer;
+    text-transform: none;
+    padding: 10px;
+    transition: all 0.5s;
+    font-family: sans-serif;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 8px;
+    width: 8rem;
+    justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
+    margin-right: 30px;
+  }
+  
