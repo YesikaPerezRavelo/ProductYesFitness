@@ -49,7 +49,7 @@ const Time = () => {
     <>
       <h2>
         {" "}
-        Tiempo: {horas}h:{minutos}m:{segundos}s
+        Oferta termina en {horas}h:{minutos}m:{segundos}s
       </h2>
     </>
   );

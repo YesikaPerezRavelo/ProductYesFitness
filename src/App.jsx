@@ -12,7 +12,6 @@ function App() {
   return (
     <>
       <NavBar />
-      <ItemListContainer greeting={"Bienvenido a mi ecommerce"} />
       <Layout
         title={"Vive la experiencia más única e inigualable"}
         color="Dark"
@@ -21,10 +20,14 @@ function App() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, earum.
         </p>
       </Layout>
+      <ItemListContainer
+        greeting={
+          "Bienvenido a YesFitness estos son los productos mas deseados"
+        }
+      />
+      <Timer />
 
       <ItemCount />
-
-      <Timer />
     </>
   );
 }
