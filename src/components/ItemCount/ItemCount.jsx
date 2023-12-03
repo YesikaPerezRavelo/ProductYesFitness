@@ -20,7 +20,7 @@ const ItemCount = () => {
     <div>
       <h1>{count}</h1>
       <button className={classes.button} onClick={decrease}>
-        DRECREASE
+        Decreace
       </button>
       <button className={classes.button} onClick={() => setCount(0)}>
         Reset
