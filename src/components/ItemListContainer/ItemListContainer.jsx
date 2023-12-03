@@ -15,6 +15,8 @@ const ItemListContainer = ({ greeting }) => {
     return (
       <div key={product.id}>
         <h2>{product.name}</h2>
+        <img src={product.img} style={{ width: 100 }} />
+        <h3>{product.price}</h3>
       </div>
     );
   });
