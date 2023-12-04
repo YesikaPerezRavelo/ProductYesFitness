@@ -20,7 +20,7 @@
 }
 
 .categories {
-  width: 50%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;

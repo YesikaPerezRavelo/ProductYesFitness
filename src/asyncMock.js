@@ -20,7 +20,7 @@ const products = [
   {
     id: "3",
     name: "Yoga",
-    price: 6500,
+    price: 10000,
     category: "Yoga",
     img: "https://img.freepik.com/free-photo/back-view-woman-doing-yoga-outdoors_23-2148769551.jpg?w=740&t=st=1701641703~exp=1701642303~hmac=2463c0f36b9d3dcf4a2beaa41cf44e4028ffa1079650c254c12f5e6db102207e",
     stock: 3,
