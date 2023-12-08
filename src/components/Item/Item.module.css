@@ -20,21 +20,34 @@ section {
   flex-wrap: wrap;
 }
 
-article {
-  display: flex;
-  flex: 0 0 300px;
-  flex-direction: column;
-  border: 1px solid black;
-  border-radius: 1rem;
-  padding: 2rem;
+card {
+  width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 1px 2px 4px rgba(15, 15, 15, 0.5);
+  margin: 20px;
 }
 
-article img {
-  order: -1;
-  align-self: center;
+card img {
+  margin-left: 50px;
+  border-radius: 8px;
+  margin-top: 1rem;
 }
 
-article button {
+card h2 {
+  margin-left: 20px;
+}
+
+card h3 {
+  margin-left: 20px;
+}
+
+card p {
+  margin-left: 20px;
+}
+
+card button {
   background: rgb(189, 34, 103);
   color: white;
   cursor: pointer;
@@ -48,5 +61,6 @@ article button {
   width: 10rem;
   justify-content: space-between;
   font-family: "Montserrat", sans-serif;
-  margin-right: 30px;
+  margin-left: 70px;
+  margin-bottom: 1rem;
 }

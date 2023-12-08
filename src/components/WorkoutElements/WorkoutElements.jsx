@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ItemList from "../ItemList/ItemList";
 
 const WorkoutElements = () => {
   const [loading, setLoading] = useState(true);
@@ -13,6 +14,15 @@ const WorkoutElements = () => {
         return response.json();
       })
       .then((json) => {
+        const productsAdapted = json.results.map((prod) => {
+          return {
+            ...prod,
+            title: prod.title,
+            thumbnail: prod.thumbnail,
+            price: prod.price,
+          };
+        });
+
         setProducts(json.results);
       })
       .catch((error) => {
@@ -46,15 +56,7 @@ const WorkoutElements = () => {
         />
         <button>Search</button>
       </form>
-      {products.map((prod) => {
-        return (
-          <div key={prod.id}>
-            <img src={prod.thumbnail} />
-            <h3>{prod.title}</h3>
-            <h4>${prod.price}</h4>
-          </div>
-        );
-      })}
+      <ItemList products={products} />
     </div>
   );
 };

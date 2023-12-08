@@ -1,12 +1,12 @@
 import classes from "./Item.module.css";
 
-const Item = ({ name, img, price }) => {
+const Item = ({ title, thumbnail, price }) => {
   return (
     <section>
-      <article>
-        <div style={{ background: "none" }}>
-          <img src={img} style={{ width: 200 }} />
-          <h2>{name}</h2>
+      <card>
+        <div>
+          <img src={thumbnail} style={{ width: 200 }} />
+          <h2>{title}</h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Voluptatibus, harum.
@@ -19,7 +19,7 @@ const Item = ({ name, img, price }) => {
           <h3>${price}</h3>
         </div>
         <button>COMPRAR</button>
-      </article>
+      </card>
     </section>
   );
 };
