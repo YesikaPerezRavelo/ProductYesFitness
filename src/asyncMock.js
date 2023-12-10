@@ -24,7 +24,8 @@ const products = [
     category: "Yoga",
     img: "https://img.freepik.com/free-photo/back-view-woman-doing-yoga-outdoors_23-2148769551.jpg?w=740&t=st=1701641703~exp=1701642303~hmac=2463c0f36b9d3dcf4a2beaa41cf44e4028ffa1079650c254c12f5e6db102207e",
     stock: 3,
-    description: "Clases de Yoga",
+    description:
+      "Clases de yoga al aire libre para disfrutar de la naturaleza y hacerte una escapadita natural, sana y pacifica",
   },
 ];
 
