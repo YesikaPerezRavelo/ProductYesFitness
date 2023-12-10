@@ -1,36 +1,38 @@
-import { useState } from "react";
-// import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-// import './App.css'
-import ItemCount from "./components/ItemCount/ItemCount.jsx";
-import NavBar from "./components/Navbar/NavBar.jsx";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/NavBar";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Layout from "./components/Layout/Layout.jsx";
-import Timer from "./components/Timer/Timer.jsx";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer.jsx";
-// import WorkoutElements from "./components/WorkoutElements/WorkoutElements.jsx";
 
-function App() {
+const App = () => {
   return (
     <>
-      <NavBar />
-      <Layout
-        title={"Vive la experiencia más única e inigualable"}
-        color="Dark"
-      >
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, earum.
-        </p>
-      </Layout>
-      <ItemListContainer
-        greeting={
-          "Bienvenido a YesFitness estos son los productos mas deseados"
-        }
-      />
-      <Timer />
-      {/* <WorkoutElements /> */}
-      <ItemCount />
+      <BrowserRouter>
+        <Navbar />
+        <Layout
+          title={"Vive la experiencia más única e inigualable"}
+          color="Dark"
+        >
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
+            earum.
+          </p>
+        </Layout>
+        <Routes>
+          <Route
+            path="/"
+            element={<ItemListContainer greeting={"Bienvenidos"} />}
+          />
+          <Route
+            path="/category/:categoryId"
+            element={<ItemListContainer greeting={"Productos filtrados"} />}
+          />
+          <Route path="/detail/:productId/" element={<ItemDetailContainer />} />
+          <Route path="*" element={<h1>404 Not Found</h1>} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
-}
+};
 
 export default App;

@@ -1,8 +1,10 @@
 import ItemCount from "../ItemCount/ItemCount";
+import Timer from "../Timer/Timer";
 
 const ItemDetail = ({ name, category, img, price, description, stock }) => {
   return (
     <div>
+      <Timer />
       <h1>{name}</h1>
       <p>categoria: {category}</p>
       <img src={img} />

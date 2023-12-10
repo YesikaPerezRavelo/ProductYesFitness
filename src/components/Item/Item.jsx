@@ -1,6 +1,7 @@
 import classes from "./Item.module.css";
+import { Link } from "react-router-dom";
 
-const Item = ({ name, img, price }) => {
+const Item = ({ id, name, img, price }) => {
   return (
     <section>
       <card>
@@ -18,7 +19,7 @@ const Item = ({ name, img, price }) => {
           </ul>
           <h3>${price}</h3>
         </div>
-        <button>COMPRAR</button>
+        <Link to={`/detail/${id}`}>Ver Detalle</Link>
       </card>
     </section>
   );
