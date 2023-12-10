@@ -1,12 +1,12 @@
 import classes from "./Item.module.css";
 
-const Item = ({ title, thumbnail, price }) => {
+const Item = ({ name, img, price }) => {
   return (
     <section>
       <card>
         <div>
-          <img src={thumbnail} style={{ width: 200 }} />
-          <h2>{title}</h2>
+          <img src={img} style={{ width: 200 }} />
+          <h2>{name}</h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Voluptatibus, harum.

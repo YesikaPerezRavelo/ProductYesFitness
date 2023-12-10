@@ -7,7 +7,7 @@ import NavBar from "./components/Navbar/NavBar.jsx";
 import Layout from "./components/Layout/Layout.jsx";
 import Timer from "./components/Timer/Timer.jsx";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer.jsx";
-import WorkoutElements from "./components/WorkoutElements/WorkoutElements.jsx";
+// import WorkoutElements from "./components/WorkoutElements/WorkoutElements.jsx";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
         }
       />
       <Timer />
-      <WorkoutElements />
+      {/* <WorkoutElements /> */}
       <ItemCount />
     </>
   );

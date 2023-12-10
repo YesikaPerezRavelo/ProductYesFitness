@@ -15,7 +15,6 @@ const NavBar = () => {
       <section className={classes.categories}>
         <button className={classes.button}>ENTRENAMIENTOS</button>
         <button className={classes.button}>AVENTURA</button>
-        <button className={classes.button}>ELEMENTOS</button>
         <button className={classes.button}>YOGA</button>
         <div className={classes.cartwidget}>
           <CartWidget />
