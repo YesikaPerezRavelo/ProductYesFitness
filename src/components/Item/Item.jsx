@@ -19,7 +19,9 @@ const Item = ({ id, name, img, price }) => {
           </ul>
           <h3>${price}</h3>
         </div>
-        <Link to={`/detail/${id}`}>Ver Detalle</Link>
+        <div className={classes.link}>
+          <Link to={`/detail/${id}`}>Ver Detalle</Link>
+        </div>
       </card>
     </section>
   );

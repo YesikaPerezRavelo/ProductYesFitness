@@ -6,7 +6,8 @@ const products = [
     category: "Excursiones",
     img: "https://images.unsplash.com/photo-1542359649-31e03cd4d909?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     stock: 25,
-    description: "Excursiones por Argentina",
+    description:
+      "Agenda un excursion de aventura para conocer nuevos lugares en Argentina",
   },
   {
     id: "2",
@@ -15,7 +16,8 @@ const products = [
     category: "Entrenamiento",
     img: "https://img.freepik.com/free-photo/full-shot-people-training-gym_23-2149049754.jpg?w=740&t=st=1701640128~exp=1701640728~hmac=4a235ae03436e40d440e80f2cb211a332082bc71035898c24cf3702166478460",
     stock: 16,
-    description: "Entrenamientos personalizados",
+    description:
+      "Me dedicó a enseñar todo tipo de técnicas de entrenamiento, yoga, elongación y relajación. Mi meta es que puedas disfrutar de cada una de ellas",
   },
   {
     id: "3",
@@ -25,7 +27,7 @@ const products = [
     img: "https://img.freepik.com/free-photo/back-view-woman-doing-yoga-outdoors_23-2148769551.jpg?w=740&t=st=1701641703~exp=1701642303~hmac=2463c0f36b9d3dcf4a2beaa41cf44e4028ffa1079650c254c12f5e6db102207e",
     stock: 3,
     description:
-      "Clases de yoga al aire libre para disfrutar de la naturaleza y hacerte una escapadita natural, sana y pacifica",
+      "Clases de yoga al aire libre para disfrutar de la naturaleza y hacerte una escapadita natural",
   },
 ];
 

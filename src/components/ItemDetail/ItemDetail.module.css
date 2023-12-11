@@ -1,0 +1,47 @@
+h3,
+p {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1rem;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+card {
+  background-color: rgb(248, 216, 242);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 1px 2px 4px rgba(15, 15, 15, 0.5);
+  margin: 20px;
+}
+
+card img {
+  margin-left: 20px;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+card h1 {
+  margin-left: 20px;
+}
+
+card h3 {
+  margin-left: 20px;
+}
+
+card p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
