@@ -25,7 +25,7 @@ section {
   flex-wrap: wrap;
 }
 
-card {
+div .card {
   background-color: rgb(248, 216, 242);
   border-radius: 8px;
   overflow: hidden;
@@ -33,25 +33,25 @@ card {
   margin: 20px;
 }
 
-card img {
+div .card img {
   margin-left: 50px;
   border-radius: 8px;
   margin-top: 1rem;
 }
 
-card h2 {
+div .card h2 {
   margin-left: 20px;
 }
 
-card h3 {
+div .card h3 {
   margin-left: 20px;
 }
 
-card p {
+div .card p {
   margin-left: 20px;
 }
 
-card button {
+div .card button {
   background: rgb(189, 34, 103);
   color: white;
   cursor: pointer;
@@ -70,32 +70,32 @@ card button {
 }
 
 @media (max-width: 768px) {
-  card {
+  div .card {
     width: 400px;
     align-content: center;
   }
 }
 
 @media (max-width: 768px) {
-  card img {
+  div .card img {
     margin-left: 90px;
   }
 }
 
 @media (max-width: 768px) {
-  card button {
+  div .card button {
     margin-left: 110px;
   }
 }
 
 @media (max-width: 500px) {
-  card img {
+  div .card img {
     margin-left: 65px;
   }
 }
 
 @media (max-width: 768px) {
-  card button {
+  div .card button {
     margin-left: 80px;
   }
 }
