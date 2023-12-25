@@ -1,7 +1,18 @@
+* {
+  padding-left: 1rem;
+}
+
 h3,
 p {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
+}
+
+.pCount {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 15rem;
+  font-weight: bold;
 }
 
 * {
@@ -19,7 +30,7 @@ section {
   flex-wrap: wrap;
 }
 
-card {
+div .card {
   background-color: rgb(248, 216, 242);
   border-radius: 8px;
   overflow: hidden;
@@ -27,21 +38,98 @@ card {
   margin: 20px;
 }
 
-card img {
+div .card img {
   margin-left: 20px;
   border-radius: 8px;
   margin-top: 1rem;
 }
 
-card h1 {
+div .card h1 {
   margin-left: 20px;
 }
 
-card h3 {
+div .card h3 {
   margin-left: 20px;
 }
 
-card p {
+div .card p {
   margin-left: 20px;
   margin-right: 20px;
+}
+
+.decrease {
+  background: rgb(189, 34, 103);
+  color: white;
+  cursor: pointer;
+  text-transform: none;
+  padding: 10px;
+  transition: all 0.5s;
+  font-family: sans-serif;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 25px;
+  width: 2rem;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 70px;
+  margin-bottom: 1rem;
+}
+
+.increase {
+  background: rgb(189, 34, 103);
+  color: white;
+  cursor: pointer;
+  text-transform: none;
+  padding: 10px;
+  transition: all 0.5s;
+  font-family: sans-serif;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 25px;
+  width: 2rem;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 70px;
+  margin-bottom: 1rem;
+}
+
+.add {
+  background: rgb(189, 34, 103);
+  color: white;
+  cursor: pointer;
+  text-transform: none;
+  padding: 10px;
+  transition: all 0.5s;
+  font-family: sans-serif;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 8px;
+  width: 10rem;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 70px;
+  margin-bottom: 1rem;
+}
+
+.change {
+  background: rgb(189, 34, 103);
+  color: white;
+  cursor: pointer;
+  text-transform: none;
+  padding: 10px;
+  transition: all 0.5s;
+  font-family: sans-serif;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 8px;
+  width: 10rem;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 70px;
+  margin-bottom: 1rem;
+}
+
+.number {
+  padding: 5px;
+  width: 3rem;
 }

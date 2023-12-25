@@ -1,0 +1,17 @@
+.div .button {
+  background: rgb(189, 34, 103);
+  color: white;
+  cursor: pointer;
+  text-transform: none;
+  padding: 10px;
+  transition: all 0.5s;
+  font-family: sans-serif;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 8px;
+  width: 10rem;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 70px;
+  margin-bottom: 1rem;
+}

@@ -17,9 +17,10 @@ const Item = ({ id, name, img, price }) => {
           <li>Lorem.</li>
         </ul>
         <h3>${price}</h3>
-      </div>
-      <div className={classes.link}>
-        <Link to={`/detail/${id}`}>Ver Detalle</Link>
+
+        <Link className={classes.link} to={`/detail/${id}`}>
+          Ver Detalle
+        </Link>
       </div>
     </section>
   );
