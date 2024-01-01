@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
 import classes from "./ItemDetail.module.css";
 
 const InputCount = ({ onAdd, stock, initial = 1 }) => {
@@ -13,15 +14,8 @@ const InputCount = ({ onAdd, stock, initial = 1 }) => {
 
   return (
     <div>
-      <input
-        type="number"
-        onChange={handleChange}
-        value={count}
-        className={classes.number}
-      />
-      <button className={classes.add} onClick={() => onAdd(count)}>
-        Agregar al carrito
-      </button>
+      <input type="number" onChange={handleChange} value={count} />
+      <button onClick={() => onAdd(count)}>Agregar al carrito</button>
     </div>
   );
 };
@@ -60,21 +54,19 @@ const ButtonCount = ({ onAdd, stock, initial = 1 }) => {
 const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
   const [inputType, setInputType] = useState("button");
 
-  const [quantity, setQuantity] = useState(0);
+  const { addItem, isInCart } = useCart();
 
   const ItemCount = inputType === "input" ? InputCount : ButtonCount;
 
-  const handleOnAdd = (count) => {
+  const handleOnAdd = (quantity) => {
     const objProductToAdd = {
       id,
       name,
       price,
-      count,
+      quantity,
     };
-    console.log(objProductToAdd);
-    console.log("agregue al carrito: ", count);
-
-    setQuantity(count);
+    addItem(objProductToAdd);
+    console.log("agregue al carrito: ", quantity);
   };
 
   return (
@@ -95,8 +87,7 @@ const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
         >
           Cambiar contador
         </button>
-
-        {quantity === 0 ? (
+        {!isInCart(id) ? (
           <ItemCount onAdd={handleOnAdd} stock={stock} />
         ) : (
           <Link to="/cart">Finalizar compra</Link>
