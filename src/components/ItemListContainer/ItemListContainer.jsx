@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
-import { getProducts, getProductsByCategory } from "../../asyncMock";
+// import { getProducts, getProductsByCategory } from "../../asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { getDocs, collection, QuerySnapshot } from "firebase/firestore";
+import { db } from "../../services/firebase/firebaseConfig";
 
 const ItemListContainer = ({ greeting }) => {
   const [loading, setLoading] = useState(true);
@@ -10,34 +12,57 @@ const ItemListContainer = ({ greeting }) => {
   const { categoryId } = useParams();
 
   useEffect(() => {
-    if (categoryId) {
-      getProductsByCategory(categoryId)
-        .then((response) => {
-          setProducts(response);
-        })
+    setLoading(true);
 
-        .catch((error) => {
-          console.log(error);
-        })
+    const collectionRef = collection(db, "products");
 
-        .finally(() => {
-          setLoading(false);
+    getDocs(collectionRef)
+      .then((queryDocumentSnapshot) => {
+        console.log(queryDocumentSnapshot);
+
+        const productsAdapted = QuerySnapshot.docs.map((doc) => {
+          const fields = doc.data();
+          return { id: doc.id, ...fields };
         });
-    } else {
-      getProducts()
-        .then((response) => {
-          setProducts(response);
-        })
-        .catch((error) => {
-          console.log(error);
-        })
 
-        .finally(() => {
-          setLoading(false);
-        });
-    }
+        setProducts(productsAdapted);
+      })
+
+      .catch((error) => {
+        console.log(error);
+      })
+
+      .finally(() => {
+        setLoading(false);
+      });
+
+    // if (categoryId) {
+    //   getProductsByCategory(categoryId)
+    //     .then((response) => {
+    //       setProducts(response);
+    //     })
+
+    //     .catch((error) => {
+    //       console.log(error);
+    //     })
+
+    //     .finally(() => {
+    //       setLoading(false);
+    //     });
+    // } else {
+    //   getProducts()
+    //     .then((response) => {
+    //       setProducts(response);
+    //     })
+    //     .catch((error) => {
+    //       console.log(error);
+    //     })
+
+    //     .finally(() => {
+    //       setLoading(false);
+    //     });
+    // }
   }, [categoryId]);
-  console.log(products);
 
   if (loading) {
     return <h1>Loading...</h1>;
