@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 // import { getProducts, getProductsByCategory } from "../../asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import { getDocs, collection, QuerySnapshot } from "firebase/firestore";
+import { getDocs, collection, query, where } from "firebase/firestore";
 import { db } from "../../services/firebase/firebaseConfig";
 
 const ItemListContainer = ({ greeting }) => {
@@ -17,10 +17,10 @@ const ItemListContainer = ({ greeting }) => {
     const collectionRef = collection(db, "products");
 
     getDocs(collectionRef)
-      .then((queryDocumentSnapshot) => {
-        console.log(queryDocumentSnapshot);
+      .then((querySnapshot) => {
+        console.log(querySnapshot);
 
-        const productsAdapted = QuerySnapshot.docs.map((doc) => {
+        const productsAdapted = querySnapshot.docs.map((doc) => {
           const fields = doc.data();
           return { id: doc.id, ...fields };
         });
