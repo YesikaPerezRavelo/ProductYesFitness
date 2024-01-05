@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import { getProductById } from "../../asyncMock";
+import { getProductById } from "../../asyncMock";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { getDoc, doc } from "firebase/firestore";
@@ -17,22 +17,25 @@ const ItemDetailContainer = () => {
     const documentRef = doc(db, "products", productId);
 
     getDoc(documentRef)
-      .then((QueryDocumentSnapshot) => {
-        const fields = QueryDocumentSnapshot.data();
-        const productsAdapted = { id: QueryDocumentSnapshot.id, ...fields };
-        setProduct(productsAdapted);
+      .then((queryDocumentSnapshot) => {
+        const fields = queryDocumentSnapshot.data();
+        const productAdapted = { id: queryDocumentSnapshot.id, ...fields };
+        setProduct(productAdapted);
       })
-
-      .cath((error) => {
+      .catch((error) => {
         console.log(error);
       })
       .finally(() => {
         setLoading(false);
       });
 
-    // getProductById(productId).then((response) => {
-    //   setProduct(response);
-    // });
+    // getProductById(productId)
+    //     .then(response => {
+    //         setProduct(response)
+    //     })
+    //     .catch(error => {
+    //         showNotification('error', 'Hubo un error cargando el producto, intente nuevamente')
+    //     })
   }, [productId]);
 
   if (loading) {
@@ -41,7 +44,7 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      <h1>Detalle del producto</h1>
+      <h1>Detalle de producto</h1>
       <ItemDetail {...product} />
     </>
   );

@@ -16,13 +16,13 @@ const NavBar = () => {
         <img onClick={() => navigate("/")} src={ReactImg2} alt="" />
       </div>
       <section className={classes.categories}>
-        <Link to="/category/Entrenamiento" className={classes.button}>
+        <Link to="/detail/egYMZCBTAcKQEc2JfbNZ" className={classes.button}>
           ENTRENAMIENTOS
         </Link>
-        <Link to="/category/Excursiones" className={classes.button}>
+        <Link to="/detail/LrsME4ETZNymXQEqqAJW" className={classes.button}>
           AVENTURA
         </Link>
-        <Link to="/category/Yoga" className={classes.button}>
+        <Link to="/detail/FwjSwam1LmXULHvgAvqC" className={classes.button}>
           YOGA
         </Link>
         <div className={classes.cartwidget}>
