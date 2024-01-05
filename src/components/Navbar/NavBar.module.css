@@ -38,16 +38,18 @@
   margin-top: 1rem;
   border: none;
   border-radius: 8px;
-  width: 10rem;
+  width: 12rem;
   justify-content: space-between;
   font-family: "Montserrat", sans-serif;
   margin-right: 30px;
+  text-decoration: none;
+  text-align: center;
 }
 
 .cartwidget {
   padding-left: 4px;
 }
 
-button:hover {
+.button:hover {
   background-color: black;
 }
