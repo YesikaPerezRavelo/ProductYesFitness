@@ -10,6 +10,7 @@ import {
   documentId,
   writeBatch,
 } from "firebase/firestore";
+import { useForm, SubmitHandler } from "react-hook-form";
 
 const Checkout = () => {
   const [loading, setLoading] = useState(false);
@@ -17,14 +18,16 @@ const Checkout = () => {
 
   const { cart, total, clearCart } = useCart();
 
+  const { register, handleSubmit } = useForm();
+
   const createOrder = async (userData) => {
     try {
       setLoading(true);
       const objOrder = {
         buyer: {
-          name: "Yesika",
-          phone: "12345678",
-          email: "yes@yes.com",
+          name: userData,
+          phone: userData,
+          email: userData,
         },
         items: cart,
         total,
@@ -82,8 +85,29 @@ const Checkout = () => {
   return (
     <>
       <h1>Checkout</h1>
+      {/* <ContactForm createOrder={createOrder} /> */}
 
-      <button onClick={createOrder}>Generar orden</button>
+      <div className="container">
+        <form className="formulario" onSubmit={handleSubmit(comprar)}>
+          <input
+            type="text"
+            placeholder="Ingresá tu nombre"
+            {...register("name")}
+          />
+          <input
+            type="email"
+            placeholder="Ingresá tu e-mail"
+            {...register("email")}
+          />
+          <input
+            type="phone"
+            placeholder="Ingresá tu teléfono"
+            {...register("phone")}
+          />
+
+          <button onClick={createOrder}>Generar orden</button>
+        </form>
+      </div>
     </>
   );
 };
