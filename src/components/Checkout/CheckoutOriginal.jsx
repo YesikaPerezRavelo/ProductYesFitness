@@ -10,7 +10,7 @@ import {
   documentId,
   writeBatch,
 } from "firebase/firestore";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 const Checkout = () => {
   const [loading, setLoading] = useState(false);
@@ -85,10 +85,9 @@ const Checkout = () => {
   return (
     <>
       <h1>Checkout</h1>
-      {/* <ContactForm createOrder={createOrder} /> */}
 
       <div className="container">
-        <form className="formulario" onSubmit={handleSubmit(comprar)}>
+        <form className="formulario" onSubmit={handleSubmit(createOrder)}>
           <input
             type="text"
             placeholder="Ingresá tu nombre"
