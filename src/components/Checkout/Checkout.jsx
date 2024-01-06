@@ -104,7 +104,7 @@ const Checkout = () => {
             {...register("phone")}
           />
 
-          <button onClick={createOrder}>Generar orden</button>
+          <button>Generar orden</button>
         </form>
       </div>
     </>
