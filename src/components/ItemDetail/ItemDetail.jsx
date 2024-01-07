@@ -79,14 +79,14 @@ const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
         <p>Categoria: {category}</p>
         <p>Descripción: {description}</p>
         <p>Precio: {price}</p>
-        <button
+        {/* <button
           className={classes.change}
           onClick={() =>
             setInputType(inputType === "input" ? "button" : "input")
           }
         >
           Cambiar contador
-        </button>
+        </button> */}
         {!isInCart(id) ? (
           <ItemCount onAdd={handleOnAdd} stock={stock} />
         ) : (

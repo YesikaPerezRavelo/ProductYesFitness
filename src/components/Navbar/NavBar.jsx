@@ -21,14 +21,14 @@ const NavBar = () => {
         </Link>
 
         <Link to="/category/excursiones" className={classes.button}>
-          AVENTURA
+          EXCURSIONES
         </Link>
 
         <Link to="/category/yoga" className={classes.button}>
           YOGA
         </Link>
 
-        <div className={classes.cartwidget}>
+        <div onClick={() => navigate("/cart")} className={classes.cartwidget}>
           <CartWidget />
         </div>
       </section>

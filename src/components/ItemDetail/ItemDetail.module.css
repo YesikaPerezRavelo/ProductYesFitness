@@ -133,3 +133,7 @@ div .card p {
   padding: 5px;
   width: 3rem;
 }
+
+div image {
+  display: flex;
+}
