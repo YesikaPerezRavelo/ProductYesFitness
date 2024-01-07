@@ -69,21 +69,24 @@ div .card::after {
 }
 
 div .card img {
-  margin-left: 50px;
+  margin-left: 18px;
   border-radius: 8px;
   margin-top: 1rem;
 }
 
 div .card h2 {
-  margin-left: 20px;
+  margin-left: 2rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 div .card h3 {
-  margin-left: 20px;
+  margin-left: 2rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 div .card p {
-  margin-left: 20px;
+  margin-left: 2rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media (max-width: 768px) {

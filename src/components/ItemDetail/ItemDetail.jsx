@@ -74,11 +74,11 @@ const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
       <div className={classes.card}>
         <h2>{name}</h2>
 
-        <img src={img} alt={name} style={{ width: 400 }} />
+        <img src={img} alt={name} style={{ width: 500 }} />
 
         <p>Categoria: {category}</p>
         <p>Descripción: {description}</p>
-        <p>Precio: {price}</p>
+        <p>Precio: ${price}</p>
         {/* <button
           className={classes.change}
           onClick={() =>
@@ -90,7 +90,9 @@ const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
         {!isInCart(id) ? (
           <ItemCount onAdd={handleOnAdd} stock={stock} />
         ) : (
-          <Link to="/cart">Finalizar compra</Link>
+          <Link className={classes.link} to="/cart">
+            Finalizar compra
+          </Link>
         )}
       </div>
     </section>

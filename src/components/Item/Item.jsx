@@ -12,7 +12,7 @@ const Item = ({ id, name, img, price }) => {
           Voluptatibus, harum.
         </p>
 
-        <h3>${price}</h3>
+        <h3>Precio ${price}</h3>
 
         <Link className={classes.link} to={`/detail/${id}`}>
           Ver Detalle

@@ -3,9 +3,11 @@
 }
 
 h3,
+h2,
 p {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
+  color: black;
 }
 
 .pCount {
@@ -31,7 +33,9 @@ section {
 }
 
 div .card {
-  background-color: rgb(248, 216, 242);
+  background-color: black;
+  width: 50%;
+  height: 650px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 1px 2px 4px rgba(15, 15, 15, 0.5);
@@ -46,15 +50,23 @@ div .card img {
 
 div .card h1 {
   margin-left: 20px;
+  color: white;
+}
+
+div .card h2 {
+  color: white;
+  font-size: 30px;
 }
 
 div .card h3 {
   margin-left: 20px;
+  color: white;
 }
 
 div .card p {
   margin-left: 20px;
   margin-right: 20px;
+  color: white;
 }
 
 .decrease {
@@ -132,8 +144,24 @@ div .card p {
 .number {
   padding: 5px;
   width: 3rem;
+  color: white;
 }
 
-div image {
-  display: flex;
+.link {
+  padding: 10px;
+  width: 80%;
+  color: white;
+  background-color: rgb(189, 34, 103);
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 60%;
+  margin-bottom: 1rem;
+}
+
+.link:hover {
+  background-color: white;
+  color: black;
 }
