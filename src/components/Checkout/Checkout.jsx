@@ -11,6 +11,7 @@ import {
   writeBatch,
 } from "firebase/firestore";
 import { useForm } from "react-hook-form";
+import classes from "./Checkout.module.css";
 
 const Checkout = () => {
   const [loading, setLoading] = useState(false);
@@ -84,27 +85,30 @@ const Checkout = () => {
 
   return (
     <>
-      <h1>Checkout</h1>
+      <h1>CHECKOUT</h1>
 
-      <div className="container">
-        <form className="formulario" onSubmit={handleSubmit(createOrder)}>
+      <div className={classes.container}>
+        <form className="form" onSubmit={handleSubmit(createOrder)}>
           <input
+            className={classes.input}
             type="text"
             placeholder="Ingresá tu nombre"
             {...register("name")}
           />
           <input
+            className={classes.input}
             type="email"
             placeholder="Ingresá tu e-mail"
             {...register("email")}
           />
           <input
+            className={classes.input}
             type="tel"
             placeholder="Ingresá tu teléfono"
             {...register("phone")}
           />
 
-          <button>Generar orden</button>
+          <button className={classes.button}>GENERAR ORDEN</button>
         </form>
       </div>
     </>
