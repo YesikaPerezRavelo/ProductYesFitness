@@ -8,13 +8,15 @@ import { db } from "../../services/firebase/firebaseConfig";
 const ItemListContainer = ({ greeting }) => {
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]);
-
+  console.log(products);
   const { categoryId } = useParams();
 
   useEffect(() => {
     setLoading(true);
 
-    const collectionRef = collection(db, "products");
+    const collectionRef = categoryId
+      ? query(collection(db, "products"), where("category", "==", categoryId))
+      : collection(db, "products");
 
     getDocs(collectionRef)
       .then((querySnapshot) => {

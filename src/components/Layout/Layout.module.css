@@ -1,9 +1,6 @@
 h1 {
   font-family: "Montserrat", sans-serif;
   font-size: large;
-  color: rgb(71, 70, 70);
-}
-
-.hero {
-  background-image: url("https://drive.google.com/uc?export=view&id=1VjvOYHQoR7Qpv9mwdKIcw9dVipPcvNbx");
+  color: black;
+  font-weight: 700;
 }
