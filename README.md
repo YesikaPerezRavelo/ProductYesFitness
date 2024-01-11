@@ -12,8 +12,8 @@
 
 _Roof draft_
 
-Start Selling Online — Quick & Easy Setup - Everything You Need To Start a Healthy Life Style. 
-Grow spiritually, physical and emotionally. 
+Start Selling Online — Quick & Easy Setup - Everything You Need To Start a Healthy Life Style.
+Grow spiritually, physical and emotionally.
 
 ```Sample React Component
 const ItemListContainer = ({ greeting }) => {
@@ -63,9 +63,16 @@ const ItemListContainer = ({ greeting }) => {
   );
 }
 ```
+
 ReactJs is used for front-end libraries for developing single page applications. Since it’s a library, we can install this library to Create React App for developing single page applications.
 
 Procedure of installation:
+
+On Windows
+Inside "This PC" go to "Local Disk (C:)" and create a folder for your project.
+On Visual Studio Code
+Inside your terminal search your file cd sample "C:/ProductsYesFitness/react/ProductsYesFitness"
+
 1. install Node.js
 2. npm install
 3. create-react-app
@@ -75,20 +82,20 @@ Procedure of installation:
 7. npm install react-simple-typewriter (React font animation that helps you animate and change your fonts)
 
 Steps taken to create this proyect:
-1. App components
-2. Resolve a promise 
-3. Perform an asynchronous operation inside of .map()
-3. Consuming APIs
-4. Navigation Routing 
-5. Hooks inside a function as a child component
-6. Events Handler
-7. useContext hooks for a context object
-8. Rendering
-9. Firebase realtime Database
-10. Data Fetching Component
-11. Presentation Component
-12. FirebaseConfig 
 
+1. App components
+2. Resolve a promise
+3. Perform an asynchronous operation inside of .map()
+4. Consuming APIs
+5. Navigation Routing
+6. Hooks inside a function as a child component
+7. Events Handler
+8. useContext hooks for a context object
+9. Rendering
+10. Firebase realtime Database
+11. Data Fetching Component
+12. Presentation Component
+13. FirebaseConfig
 
 | Name   | Last Name | Email              |
 | ------ | --------- | ------------------ |
