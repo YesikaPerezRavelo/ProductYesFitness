@@ -14,15 +14,7 @@ const App = () => {
       <BrowserRouter>
         <CartProvider>
           <Navbar />
-          <Layout
-            title={"Vive la experiencia más única e inigualable"}
-            color="Dark"
-          >
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
-              earum.
-            </p>
-          </Layout>
+          <Layout></Layout>
           <Routes>
             <Route
               path="/"

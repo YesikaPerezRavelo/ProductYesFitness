@@ -8,8 +8,8 @@ const Item = ({ id, name, img, price }) => {
         <img src={img} style={{ width: 250 }} />
         <h2>{name}</h2>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Voluptatibus, harum.
+          "Cuando la salud del corazón y los pulmones mejora podes realizar
+          cualquier cosa que te propongas"
         </p>
 
         <h3>Precio ${price}</h3>
