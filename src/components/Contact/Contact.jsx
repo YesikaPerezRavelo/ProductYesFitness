@@ -3,7 +3,7 @@ import classes from "./Contact.module.css";
 import { db } from "../../services/firebase/firebaseConfig";
 
 const Contact = () => {
-  const { register, handleSubmit } = useForm(db);
+  const { register, handleSubmit } = useForm();
 
   const send = (data) => {
     console.log(data);
@@ -41,7 +41,7 @@ const Contact = () => {
         <input
           className={classes.message}
           type="message"
-          textarea="Mensaje"
+          placeholder="Mensaje"
           {...register("message")}
         />
 
