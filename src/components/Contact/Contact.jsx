@@ -3,16 +3,16 @@ import classes from "./Contact.module.css";
 import { db } from "../../services/firebase/firebaseConfig";
 
 const Contact = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit } = useForm(db);
 
-  const enviar = (data) => {
+  const send = (data) => {
     console.log(data);
   };
 
   return (
     <div className={classes.container}>
       <h1 className="main-title">Información del contacto</h1>
-      <form className="form" onSubmit={handleSubmit(enviar)}>
+      <form className="form" onSubmit={handleSubmit(send)}>
         <input
           className={classes.input}
           type="text"
