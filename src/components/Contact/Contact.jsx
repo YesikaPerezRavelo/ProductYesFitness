@@ -6,7 +6,15 @@ const Contact = () => {
   const { register, handleSubmit } = useForm();
 
   const send = (data) => {
-    console.log(data);
+    const db = firebase.firestore();
+    db.collection("contacts")
+      .add(data)
+      .then(() => {
+        console.log("Data sent successfully!");
+      })
+      .catch((error) => {
+        console.error("Error sending data: ", error);
+      });
   };
 
   return (
@@ -33,7 +41,7 @@ const Contact = () => {
         />
         <input
           className={classes.input}
-          type="phone"
+          type="tel"
           placeholder="Ingresá tu teléfono"
           {...register("Phone")}
         />
