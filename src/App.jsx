@@ -6,6 +6,7 @@ import Layout from "./components/Layout/Layout.jsx";
 import { CartProvider } from "./context/CartContext";
 import CartView from "./components/CartView/CartView.jsx";
 import Checkout from "./components/Checkout/Checkout.jsx";
+import Contact from "./components/Contact/Contact.jsx";
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
             />
             <Route path="/cart" element={<CartView />} />
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<h1>404 Not Found</h1>} />
           </Routes>
         </CartProvider>

@@ -1,0 +1,48 @@
+.input {
+  padding-top: 2rem;
+  display: flex;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 25rem;
+  padding: 0.5rem;
+}
+
+.button {
+  padding: 10px;
+  color: white;
+  background-color: rgb(189, 34, 103);
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+.container {
+  background-color: black;
+  border-radius: 10px;
+  width: 40%;
+  padding-top: 1.5rem;
+  margin-left: 25%;
+}
+
+.container h1 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: medium;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 25rem;
+  height: 4rem;
+  padding: 0.5rem;
+}
