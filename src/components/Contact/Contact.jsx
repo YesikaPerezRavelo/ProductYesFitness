@@ -1,14 +1,14 @@
+import { addDoc, collection } from "firebase/firestore";
 import { useForm } from "react-hook-form";
 import classes from "./Contact.module.css";
 import { db } from "../../services/firebase/firebaseConfig";
 
 const Contact = () => {
   const { register, handleSubmit } = useForm();
+  const contactsCollectionRef = collection(db, "contacts");
 
   const send = (data) => {
-    const db = firebase.firestore();
-    db.collection("contacts")
-      .add(data)
+    addDoc(contactsCollectionRef, data)
       .then(() => {
         console.log("Data sent successfully!");
       })
