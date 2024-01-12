@@ -2,6 +2,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { useForm } from "react-hook-form";
 import classes from "./Contact.module.css";
 import { db } from "../../services/firebase/firebaseConfig";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const { register, handleSubmit } = useForm();
@@ -10,7 +11,11 @@ const Contact = () => {
   const send = (data) => {
     addDoc(contactsCollectionRef, data)
       .then(() => {
-        console.log("Data sent successfully!");
+        Swal.fire({
+          title: "Tu mensaje ha sido enviado",
+          imageUrl:
+            "https://firebasestorage.googleapis.com/v0/b/productyesfitness.appspot.com/o/a.webp?alt=media&token=adc1f13a-d93a-4caa-9b5a-65e77071d8e2",
+        });
       })
       .catch((error) => {
         console.error("Error sending data: ", error);

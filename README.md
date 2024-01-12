@@ -66,7 +66,7 @@ const ItemListContainer = ({ greeting }) => {
 
 ReactJs is used for front-end libraries for developing single page applications. Since it’s a library, we can install this library to Create React App for developing single page applications.
 
-Procedure of installation:
+#### Procedure of installation:
 
 On Windows
 Inside "This PC" go to "Local Disk (C:)" and create a folder for your project.
@@ -80,8 +80,9 @@ Inside your terminal search your file cd sample "C:/ProductsYesFitness/react/Pro
 5. npm install react-router-dom ( It allows you to display pages and allow users to navigate them)
 6. npm install react-hook-form (React form library that helps you validate forms quickly)
 7. npm install react-simple-typewriter (React font animation that helps you animate and change your fonts)
+8. npm install sweetalert2 (Notifications)
 
-Steps taken to create this proyect:
+#### Steps taken to create this proyect:
 
 1. App components
 2. Resolve a promise
@@ -96,11 +97,48 @@ Steps taken to create this proyect:
 11. Data Fetching Component
 12. Presentation Component
 13. FirebaseConfig
+14. Environment Variables
+
+App
+
+#### Routes & rendering component
+
+````Sample React Component
+<Route path="/" element={<ItemListContainer greeting={"Bienvenidos"} />}/>```
+Home
+
+```Sample React Component
+<Route path="/category/:categoryId" element={<ItemListContainer greeting={"Productos filtrados"} />}/>```
+List of Products
+
+```Sample React Component
+<Route path="/detail/:productId/" element={<ItemDetailContainer />}/>```
+Item Detail
+
+```Sample React Component
+<Route path="/cart" element={<CartView />} />```
+Shopping Cart View
+
+```Sample React Component
+<Route path="/checkout" element={<Checkout />} />```
+Checkout product or products
+
+```Sample React Component
+<Route path="/contact" element={<Contact />} />```
+Message
+
+```Sample React Component
+<Route path="*" element={<h1>404 Not Found</h1>} />```
+Error if page is not found
+
 
 | Name   | Last Name | Email              |
 | ------ | --------- | ------------------ |
 | Yesika | Perez     | yesikapr@gmail.com |
 
 [LinkedIn](https://www.linkedin.com/in/yesikaperezravelo/)
+[Verce](https://product-yes-fitness-2z1vgb6d9-yesika-perez-ravelos-projects.vercel.app/)
+[Netlify](https://productsyesfitness.netlify.app/)
 
 ![imagenPerfil](https://drive.google.com/uc?export=view&id=1q5jOI0gAZOBcO4X5Gzg59GdVWbTsK-lr)
+````
