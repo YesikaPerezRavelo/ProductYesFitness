@@ -1,72 +1,23 @@
-# ProductYesFitness an E-commerce
+**# ProductYesFitness an E-commerce**
 
-## Vite, React, Javascript & Firebase
+**## Vite, React, Javascript & Firebase**
 
-### Portfolio
+**### Portfolio**
 
-#### Website to sell products
+**#### Website to sell products**
 
 ---
 
-**Ultimate fitness goals**
+\***\*Ultimate fitness goals\*\***
 
-_Roof draft_
+**Intro**
 
 Start Selling Online — Quick & Easy Setup - Everything You Need To Start a Healthy Life Style.
 Grow spiritually, physical and emotionally.
 
-```Sample React Component
-const ItemListContainer = ({ greeting }) => {
-  const [loading, setLoading] = useState(true);
-  const [products, setProducts] = useState([]);
-  console.log(products);
-  const { categoryId } = useParams();
-
-  useEffect(() => {
-    setLoading(true);
-
-    const collectionRef = categoryId
-      ? query(collection(db, "products"), where("category", "==", categoryId))
-      : collection(db, "products");
-
-    getDocs(collectionRef)
-      .then((querySnapshot) => {
-        console.log(querySnapshot);
-
-        const productsAdapted = querySnapshot.docs.map((doc) => {
-          const fields = doc.data();
-          return { id: doc.id, ...fields };
-        });
-
-        setProducts(productsAdapted);
-      })
-
-      .catch((error) => {
-        console.log(error);
-      })
-
-      .finally(() => {
-        setLoading(false);
-      });
-
-  }, [categoryId]);
-
-  if (loading) {
-    return <h1>Loading...</h1>;
-  }
-
-  return (
-    <div>
-      <h1>{greeting}</h1>
-      <ItemList products={products} />
-    </div>
-  );
-}
-```
-
 ReactJs is used for front-end libraries for developing single page applications. Since it’s a library, we can install this library to Create React App for developing single page applications.
 
-#### Procedure of installation:
+**#### Procedure of installation:**
 
 On Windows
 Inside "This PC" go to "Local Disk (C:)" and create a folder for your project.
@@ -82,7 +33,7 @@ Inside your terminal search your file cd sample "C:/ProductsYesFitness/react/Pro
 7. npm install react-simple-typewriter (React font animation that helps you animate and change your fonts)
 8. npm install sweetalert2 (Notifications)
 
-#### Steps taken to create this proyect:
+**#### Steps taken to create this proyect:**
 
 1. App components
 2. Resolve a promise
@@ -101,44 +52,60 @@ Inside your terminal search your file cd sample "C:/ProductsYesFitness/react/Pro
 
 App
 
-#### Routes & rendering component
+**#### Routes & rendering component**
 
-````Sample React Component
-<Route path="/" element={<ItemListContainer greeting={"Bienvenidos"} />}/>```
-Home
+<^>Home<^>
 
-```Sample React Component
-<Route path="/category/:categoryId" element={<ItemListContainer greeting={"Productos filtrados"} />}/>```
-List of Products
+```
+<Route path="/" element={<ItemListContainer greeting={"Bienvenidos"} />}/>
+```
 
-```Sample React Component
-<Route path="/detail/:productId/" element={<ItemDetailContainer />}/>```
-Item Detail
+<^>List of Products<^>
 
-```Sample React Component
-<Route path="/cart" element={<CartView />} />```
-Shopping Cart View
+```
+<Route path="/category/:categoryId" element={<ItemListContainer greeting={"Productos filtrados"} />}/>
+```
 
-```Sample React Component
-<Route path="/checkout" element={<Checkout />} />```
-Checkout product or products
+<^>Item Detail<^>
 
-```Sample React Component
-<Route path="/contact" element={<Contact />} />```
-Message
+```
+<Route path="/detail/:productId/" element={<ItemDetailContainer />}/>
+```
 
-```Sample React Component
+<^>Shopping Cart View<^>
+
+```
+<Route path="/cart" element={<CartView />} />
+```
+
+<^>Checkout product or products<^>
+
+```
+<Route path="/checkout" element={<Checkout />} />
+```
+
+<^>Message<^>
+
+```
+<Route path="/contact" element={<Contact />} />
+```
+
+<^>Error if page is not found<^>
+
+````
 <Route path="*" element={<h1>404 Not Found</h1>} />```
-Error if page is not found
+````
 
+---
 
 | Name   | Last Name | Email              |
 | ------ | --------- | ------------------ |
 | Yesika | Perez     | yesikapr@gmail.com |
 
 [LinkedIn](https://www.linkedin.com/in/yesikaperezravelo/)
-[Verce](https://product-yes-fitness-2z1vgb6d9-yesika-perez-ravelos-projects.vercel.app/)
+
+[Vercel](https://product-yes-fitness-2z1vgb6d9-yesika-perez-ravelos-projects.vercel.app/)
+
 [Netlify](https://productsyesfitness.netlify.app/)
 
-![imagenPerfil](https://drive.google.com/uc?export=view&id=1q5jOI0gAZOBcO4X5Gzg59GdVWbTsK-lr)
-````
+![imagenPerfil](https://firebasestorage.googleapis.com/v0/b/productyesfitness.appspot.com/o/fitnessProducts.png?alt=media&token=673220bd-90ca-46d0-bb5e-fc13a54f5ac7)
