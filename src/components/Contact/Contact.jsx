@@ -5,7 +5,12 @@ import { db } from "../../services/firebase/firebaseConfig";
 import Swal from "sweetalert2";
 
 const Contact = () => {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { isSubmitSuccessful },
+  } = useForm();
   const contactsCollectionRef = collection(db, "contacts");
 
   const send = (data) => {
@@ -17,7 +22,7 @@ const Contact = () => {
             "https://firebasestorage.googleapis.com/v0/b/productyesfitness.appspot.com/o/a.webp?alt=media&token=adc1f13a-d93a-4caa-9b5a-65e77071d8e2",
         });
 
-        if (isSubmitSuccessfull) {
+        if (isSubmitSuccessful) {
           reset();
         }
       })
