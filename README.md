@@ -106,6 +106,4 @@ App
 
 [Vercel](https://product-yes-fitness-2z1vgb6d9-yesika-perez-ravelos-projects.vercel.app/)
 
-[Netlify](https://productsyesfitness.netlify.app/)
-
 ![imagenPerfil](https://firebasestorage.googleapis.com/v0/b/productyesfitness.appspot.com/o/fitnessProducts.png?alt=media&token=673220bd-90ca-46d0-bb5e-fc13a54f5ac7)
